@@ -24,7 +24,18 @@ const Exps2 = styled(animated.div)`
   background-color: red;
 `; // 버튼 1 관련
 
+const Title = styled.div`
+  font-size: 40pt;
+  text-decoration: underline;
+  font-weight: bold;
+  letter-spacing: 3px;
+  grid-column: 1/3;
 
+  // text-shadow: 2px 2px;
+  // word-spacing: 단어 사이 간격
+  // text-align : 정렬
+  // line-height: 줄간격
+`;
 
 const Donut1 = styled(animated.svg)`
   width: 300px;
@@ -44,13 +55,25 @@ const Donut1 = styled(animated.svg)`
 const Donuto = styled(animated.div)`
 
   position: relative;
-  display: inline-block;
-  width: 300px;
-  height:300px;
+  display: flex;
+  width: 100px;
+  height:100px;
   border-radius: 50%;
-  
-
 `;
+
+const Indonut = styled.div`
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  text-align:center;
+  line-height: 80px;
+  width:80px;
+  height:80px;
+  overflow:hidden;
+  border-radius: 50%;
+  background: white;
+`;
+
 const Trail1 = styled.div`
   width: 300px;
 
@@ -180,7 +203,7 @@ const Template = () => {
   const {dono} = useSpring({
     dono: 100,
     from: { dono:0 },
-    config: 	{ mass: 1, tension: 120, friction: 70 },
+    config: 	{ mass: 1, tension: 150, friction: 70 },
   });
 
 
@@ -226,15 +249,20 @@ const Template = () => {
    
       </Donut1>*/} 
       
-      <Donuto style={{background: dono.to(dono => `conic-gradient(red ${dono}% , white ${dono}%)`)}}></Donuto>
+      <Donuto style={{background: dono.to(dono => `conic-gradient(red ${dono}% , white ${dono}%)`)}}>
+        <Indonut>
+          <Img src={img2}/>
+        </Indonut>
+      </Donuto>
        원 관련 
+       {/*}
       <Titlediv >
       <Absol style={expr1}>
         <Absol style={expr2}> ㅁㅁㅁ </Absol>
         ㄱ
       </Absol>
       </Titlediv>
-       
+    */}
 {/*
 
   
