@@ -8,7 +8,31 @@ import img3 from "./img/3.jpg"
 import img4 from "./img/4.jpg"
 import img5 from "./img/5.jpg"
 import img6 from "./img/6.jpg"
+/////////////// 기타
 
+const Circle = styled(animated.div)`
+  position: relative;
+  display: flex;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin: 0 auto;
+`;
+
+const Incircle = styled.div`
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-align: center;
+  line-height: 225px;
+  width: 140px;
+  height: 140px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: white;
+  
+`;
+/////////////////////////////////
 const Exps1 = styled.div`
   width: 200px;
   height: 50px;
@@ -231,10 +255,10 @@ const Template = () => {
   return (
     <div>
       hello template
-     {/* <Exps1 ref={ref} onClick={() => toggle(!open)}>
+      <Exps1 ref={ref} onClick={() => toggle(!open)}>
         <Exps2 style={expp1} />
       </Exps1>
-      {/* 바 관련 *
+       바 관련 *
 
       
       <Donut1 viewBox="0 0 51 51" onClick={() => setRatio(!ratio)} style={circleprops}>
@@ -247,7 +271,7 @@ const Template = () => {
           
         </circle>
    
-      </Donut1>*/} 
+      </Donut1>
       
       <Donuto style={{background: dono.to(dono => `conic-gradient(red ${dono}% , white ${dono}%)`)}}>
         <Indonut>
@@ -255,15 +279,14 @@ const Template = () => {
         </Indonut>
       </Donuto>
        원 관련 
-       {/*}
+       
       <Titlediv >
       <Absol style={expr1}>
         <Absol style={expr2}> ㅁㅁㅁ </Absol>
         ㄱ
       </Absol>
       </Titlediv>
-    */}
-{/*
+
 
   
       <Trail1 onClick={() => setOpent(!opent)}>
@@ -283,7 +306,7 @@ const Template = () => {
          <Img2 src={img6} style={{opacity:expi4.opacity, top:'300px'}}/>
          <Img2 src={img2} style={{opacity:expi5.opacity, top:'300px'}}/>
        </Thumb>
-*/}
+
     </div>
   );
 };
